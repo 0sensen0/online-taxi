@@ -14,6 +14,7 @@
 
     <modules>
         <module>api-passenger</module>
+        <module>service-verificationcode</module>
     </modules>
     <packaging>pom</packaging>
 
