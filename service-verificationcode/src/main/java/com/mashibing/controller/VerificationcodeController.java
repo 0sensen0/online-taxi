@@ -11,8 +11,9 @@ public class VerificationcodeController {
     @GetMapping("/verificationcodeNumer/{size}")
     public ResponseResult verificationcodeNumber(@PathVariable("size") Integer size) {
         double number = ((Math.random() * 9) + 1) * Math.pow(10, size - 1);
+        System.out.println("生成的验证码为:" + number);
         NumberCodeResponse response = new NumberCodeResponse();
         response.setNumberCode((int) number);
-        return   ResponseResult.success(response);
+        return ResponseResult.success(response);
     }
 }

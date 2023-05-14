@@ -11,6 +11,9 @@ public class ResponseResult<T> {
     private String message;
     private T data;
 
+    public static <T> ResponseResult success() {
+        return new ResponseResult().setCode(CommonStatusEnum.SUCCESS.getCode()).setMessage(CommonStatusEnum.SUCCESS.getValue());
+    }
     /**
      * 成功响应值
      *
